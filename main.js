@@ -97,7 +97,7 @@ const meteorCollisionMap = new Map();
 
 function checkCollisions(meteor) {
   if (meteorCollisionMap.has(meteor)) {
-    return; // Collision already detected for this meteor, exit early
+    return;
   }
 
   let gameWindow = document.querySelector('.game-container');
@@ -126,18 +126,13 @@ function checkCollisions(meteor) {
 let BestMinut = getCookie('bestMinut');
 let bestSecond = getCookie('bestSecond');
 
-// Check if the cookies don't exist or are not numeric
 if (BestMinut === null || isNaN(BestMinut)) {
-  // Set a default value for BestMinut (e.g., 0)
   BestMinut = 0;
-  // Set the cookie with the default value
   setCookie('bestMinut', BestMinut);
 }
 
 if (bestSecond === null || isNaN(bestSecond)) {
-  // Set a default value for bestSecond (e.g., 0)
   bestSecond = 0;
-  // Set the cookie with the default value
   setCookie('bestSecond', bestSecond);
 }
 
