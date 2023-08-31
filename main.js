@@ -153,16 +153,15 @@ function GameOver() {
   if (minut > BestMinut) {
     BestMinut = minut;
     setCookie('bestMinut', BestMinut);
+    bestSecond = sekunda;
+    setCookie('bestSecond', bestSecond);
+  }
+  if (minut >= BestMinut) {
     if (sekunda > bestSecond) {
       bestSecond = sekunda;
       setCookie('bestSecond', bestSecond);
     }
   }
-  if (sekunda > bestSecond) {
-    bestSecond = sekunda;
-    setCookie('bestSecond', bestSecond);
-  }
-
   gameEnded = true;
   let overlay = document.querySelector('.gameover');
   overlay.style.display = 'block';
