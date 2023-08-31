@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-container">
+        <div class="player" id="player"></div>
+        <div class="meteors"></div>
+        <div class="health"></div>
+        <div class="timer">
+          <p>00:00</p>
+        </div>
+        <div class="gameover">
+            <h1 class="naslov">
+                GameOver
+            </h1>
+            <p class="time">U Lasted 00:00</p>
+            <p class="bestTime">Your Best Time: 00:00</p>
+           <center> <button>Restart</button>
+           <h6>Made by CojaDev</h6></center>
+        </div>
+      </div>
+    </div>
+    
+        
+    </div>
+    <audio data-key="1" src="sounds/Explosion.mp3"></audio>
+    <script src="meteor.js"></script>
+    <script src="player.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
